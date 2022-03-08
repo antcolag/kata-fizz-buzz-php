@@ -15,7 +15,11 @@ Bonus/advanced objective:
 - write automated tests that prove that the code solves the problems
 - use TDD (use GIT in a good way to show the TDD Cycle by committing each step)
 
-Feel free to use this repository as a template for your one, or fork from this: in this branch, you have a ready-to-use PHP project with a stupid class and its own stupid test, that you can use as a starting point for your solution. If you prefer another language or simply starting from scratch, feel free to do it, just be sure to copy this README file in the repository as a reference. Thanks!
+### Instruction to use this template
+
+Feel free to use this repository as a template for your one: in this branch, you have a ready-to-use PHP project with a stupid class and its own stupid test, that you can use as a starting point for your solution. If you prefer another language or simply starting from scratch, feel free to do it, just be sure to copy this README file in the repository as a reference. Thanks!
+
+Once you cloned the repository, you just need to install dependencies via `composer`, then you will be able to start working in your IDE.
 
 ## Input/Output table example
 
