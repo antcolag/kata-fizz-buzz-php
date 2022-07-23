@@ -52,3 +52,16 @@ Once you cloned the repository, you just need to install dependencies via `compo
 | 98     	| 98      |
 | 99     	| Fizz    |
 | 100    	| Buzz    |
+
+
+## Installation and run
+
+```
+docker compose run --rm install
+```
+
+then
+
+```
+docker compose run --rm test
+```

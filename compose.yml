@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  test:
+    image: php:8.0
+    volumes:
+      - .:/mymenu
+    working_dir: /mymenu
+    command: php vendor/bin/phpunit tests/Kata
+
+  install:
+    image: composer
+    volumes:
+      - .:/mymenu
+    working_dir: /mymenu
+    command: 'composer update'
+
