@@ -16,6 +16,23 @@ class FizzBuzzTest extends TestCase
         $this->fizzBuzz = new FizzBuzz($this->printerMock);
     }
 
+    public function testOne(): void
+    {
+        $this->printerMock->expects($this->exactly(1))->method('print')->withConsecutive(
+            [$this->equalTo('1')],
+        );
+        $this->fizzBuzz->handle(1);
+    }
+
+    public function testTwo(): void
+    {
+        $this->printerMock->expects($this->exactly(2))->method('print')->withConsecutive(
+            [$this->equalTo('1')],
+            [$this->equalTo('2')],
+        );
+        $this->fizzBuzz->handle(2);
+    }
+
     public function testFizz(): void
     {
         $this->printerMock->expects($this->exactly(3))->method('print')->withConsecutive(

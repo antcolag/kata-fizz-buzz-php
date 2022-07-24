@@ -10,21 +10,12 @@ class FizzBuzz
         $this->printer = $printer;
     }
 
-    public function handle(int $arg = 100): bool
+    public function handle(int $arg = 100, int $current = 1): bool
     {
-        $current = 0;
-        while(++$current <= $arg){
-            if(!($current % 15)) {
-                $this->printer->print('FizzBuzz');
-            } elseif(!($current % 3)) {
-                $this->printer->print('Fizz');
-            } elseif(!($current % 5)) {
-                $this->printer->print('Buzz');
-            } else {
-                $this->printer->print((string) $current);
-            }
-        }
-
-        return true;
+        $isFizzBuzz = (str_repeat('Fizz', !($current % 3)) . str_repeat('Buzz', !($current % 5)));
+        $this->printer->print(
+            $isFizzBuzz ? $isFizzBuzz : (string) $current
+        );
+        return (!($arg > $current)) || $this->handle($arg, $current + 1);
     }
 }
